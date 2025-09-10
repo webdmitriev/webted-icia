@@ -2,7 +2,6 @@
   position: relative;
   display: block;
   width: 100%;
-  min-height: 660px;
   background: $white url("../img/main/main-1920.jpg") center / cover no-repeat;
   z-index: 20;
   &:before {
@@ -13,6 +12,29 @@
     width: 100%;
     height: 240px;
     background: linear-gradient(360deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+    z-index: 2;
+  }
+  .container {
+    position: relative;
+    z-index: 10;
+  }
+  .line-wrap {
+    align-content: flex-end;
+    min-height: 660px;
+    padding-bottom: 40px;
+  }
+  .h1 {
+    display: block;
+    width: 100%;
+    max-width: max-content;
+    font-family: $ff;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.2;
+    letter-spacing: -0.04em;
+    color: $snow;
+  }
+  .btn {
   }
 }
 

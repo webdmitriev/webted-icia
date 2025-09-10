@@ -5,7 +5,7 @@ $white: #ffffff;
 $black: #313131;
 
 $blueDark: #050e2c;
-$sapphire: #050e2c;
+$sapphire: #0b1b68;
 $winter: #f1f8fb;
 $snow: #f5f7fa;
 $blue: #70a9ff;
@@ -27,6 +27,7 @@ body {
   font-size: $fz;
   line-height: $lh;
   color: $black;
+  background-color: #f5f7fa;
 }
 
 #app {
@@ -42,6 +43,25 @@ body {
   max-width: $container;
   margin-inline: auto;
   padding-inline: $indent;
+}
+
+.blueDark {
+  color: #050e2c;
+}
+.sapphire {
+  color: #0b1b68;
+}
+.winter {
+  color: #f1f8fb;
+}
+.snow {
+  color: #f5f7fa;
+}
+.blue {
+  color: #70a9ff;
+}
+.gray {
+  color: #ececec;
 }
 
 .pos-r {
@@ -184,6 +204,11 @@ textarea {
   display: block;
   width: 100%;
   font-family: $ff;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+  color: $blueDark;
 }
 .h3 {
   display: block;
@@ -191,8 +216,69 @@ textarea {
   font-family: $ff;
 }
 
+.subtitle {
+  display: block;
+  width: 100%;
+  font-family: $ff;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.2;
+  color: $blueDark;
+}
+
 .btn {
-  //
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  width: 100%;
+  max-width: max-content;
+  padding: 8px 13px;
+  font-family: $ff;
+  line-height: 1;
+  text-align: center;
+  transition: all 0.4s ease;
+  &:after {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    transition: all 0.4s ease;
+  }
+  &.btn-white {
+    font-weight: 400;
+    font-size: 16px;
+    color: $blueDark;
+    background-color: $snow;
+    border-radius: 20px;
+    &:after {
+      background: url("../img/icons/arrow-right-dark.svg") center / contain no-repeat;
+    }
+    &:hover {
+      color: $snow;
+      background-color: $blueDark;
+      &:after {
+        background: url("../img/icons/arrow-right-white.svg") center / contain no-repeat;
+      }
+    }
+  }
+  &.btn-dark {
+    font-weight: 400;
+    font-size: 16px;
+    color: $white;
+    background-color: $sapphire;
+    border-radius: 20px;
+    &:after {
+      background: url("../img/icons/arrow-bottom-white.svg") center / contain no-repeat;
+    }
+    &:hover {
+      background-color: $blue;
+      &:after {
+        background: url("../img/icons/arrow-bottom-white.svg") center / contain no-repeat;
+      }
+    }
+  }
 }
 
 .line-clamp {
