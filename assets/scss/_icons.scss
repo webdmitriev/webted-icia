@@ -1,0 +1,15 @@
+.icon-lk-white {
+  background: url("../img/icons/lk-white.svg") center / contain no-repeat;
+  transition: all 0.4s ease;
+  &:not(.icon-hover-none):hover {
+    background: url("../img/icons/lk-dark.svg") center / contain no-repeat;
+  }
+}
+
+.icon-search-white {
+  background: url("../img/icons/search-white.svg") center / contain no-repeat;
+  transition: all 0.4s ease;
+  &:not(.icon-hover-none):hover {
+    background: url("../img/icons/search-dark.svg") center / contain no-repeat;
+  }
+}
