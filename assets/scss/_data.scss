@@ -308,6 +308,9 @@ textarea {
       background: url("../img/icons/arrow-bottom-white.svg") center / contain no-repeat;
     }
   }
+  &.btn-border-dark {
+    border: 1px solid $blueDark;
+  }
 }
 
 .line-clamp {
