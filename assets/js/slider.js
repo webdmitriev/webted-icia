@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-  $('.www').each(function () {
+  $('.services-slider').each(function () {
     const slider = $(this);
     slider.slick({
       autoplay: true,
@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded', function () {
       slidesToShow: 1,
       slidesToScroll: 1,
       variableWidth: true,
-      prevArrow: $('.www .prev'),
-      nextArrow: $('.www .next'),
+      prevArrow: false,
+      nextArrow: false,
       rows: 0,
       responsive: [
         {

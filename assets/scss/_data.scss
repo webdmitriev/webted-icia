@@ -252,31 +252,59 @@ textarea {
     color: $blueDark;
     background-color: $snow;
     border-radius: 20px;
-    &:after {
-      background: url("../img/icons/arrow-right-dark.svg") center / contain no-repeat;
-    }
     &:hover {
       color: $snow;
       background-color: $blueDark;
-      &:after {
-        background: url("../img/icons/arrow-right-white.svg") center / contain no-repeat;
-      }
     }
   }
   &.btn-dark {
     font-weight: 400;
     font-size: 16px;
     color: $white;
+    background-color: $blueDark;
+    border-radius: 20px;
+    &:hover {
+      color: $snow;
+      background-color: $blueDark;
+    }
+  }
+  &.btn-blue-dark {
+    font-weight: 400;
+    font-size: 16px;
+    color: $white;
     background-color: $sapphire;
     border-radius: 20px;
+    &:hover {
+      background-color: $blue;
+    }
+  }
+  &.icon-right-white {
+    &:after {
+      background: url("../img/icons/arrow-right-white.svg") center / contain no-repeat;
+    }
+  }
+  &.icon-right-dark-to-white {
+    &:after {
+      background: url("../img/icons/arrow-right-dark.svg") center / contain no-repeat;
+    }
+    &:hover:after {
+      background: url("../img/icons/arrow-right-white.svg") center / contain no-repeat;
+    }
+  }
+  &.icon-right-white-to-dark {
+    &:after {
+      background: url("../img/icons/arrow-right-white.svg") center / contain no-repeat;
+    }
+    &:hover:after {
+      background: url("../img/icons/arrow-right-dark.svg") center / contain no-repeat;
+    }
+  }
+  &.icon-bottom {
     &:after {
       background: url("../img/icons/arrow-bottom-white.svg") center / contain no-repeat;
     }
-    &:hover {
-      background-color: $blue;
-      &:after {
-        background: url("../img/icons/arrow-bottom-white.svg") center / contain no-repeat;
-      }
+    &:hover:after {
+      background: url("../img/icons/arrow-bottom-white.svg") center / contain no-repeat;
     }
   }
 }
