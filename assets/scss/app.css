@@ -921,6 +921,99 @@ textarea {
   padding-block: 50px;
   z-index: 20;
 }
+.research .h2 {
+  margin-bottom: 40px;
+}
+.research .line-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+}
+.research .research-image {
+  display: block;
+  width: 286px;
+  height: inherit;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.research .accordion {
+  display: flex;
+  width: calc(100% - 612px);
+  height: 300px;
+  background-color: #0b1b68;
+  border-radius: 24px;
+  overflow: hidden;
+}
+.research .accordion .panel {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex: 0 0 60px;
+  padding: 16px;
+  background-color: #0b1b68;
+  border-radius: 24px;
+  border: 1px solid #0b1b68;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+.research .accordion .panel:before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  display: block;
+  width: 22px;
+  height: 22px;
+  background: url("../img/icons/plus-white.svg") center/contain no-repeat;
+  transition: all 0.4s ease;
+}
+.research .accordion .panel .panel-title {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: max-content;
+  margin-right: 0px;
+  padding-bottom: 30px;
+  padding-left: 10px;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: -0.04em;
+  writing-mode: vertical-lr;
+  color: #f5f7fa;
+  border-left: 1px solid #ffffff;
+  transform: rotate(180deg);
+}
+.research .accordion .panel .panel-content {
+  display: none;
+  width: 100%;
+}
+.research .accordion .panel.active {
+  flex: 1 1 auto;
+  background-color: #f1f8fb;
+}
+.research .accordion .panel.active:before {
+  background: url("../img/icons/minus-dark.svg") center/contain no-repeat;
+}
+.research .accordion .panel.active .panel-title {
+  margin-right: 24px;
+  color: #050e2c;
+  border-color: #050e2c;
+}
+.research .accordion .panel.active .panel-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: space-between;
+}
+.research .btn {
+  justify-content: space-between;
+  max-width: 286px;
+}
 
 .overlay {
   position: fixed;

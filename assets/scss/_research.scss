@@ -4,6 +4,103 @@
   width: 100%;
   padding-block: 50px;
   z-index: 20;
+  .h2 {
+    margin-bottom: 40px;
+  }
+
+  .line-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+  }
+
+  .research-image {
+    display: block;
+    width: 286px;
+    height: inherit;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+  .accordion {
+    display: flex;
+    width: calc(100% - 612px);
+    height: 300px;
+    background-color: $sapphire;
+    border-radius: 24px;
+    overflow: hidden;
+    .panel {
+      position: relative;
+      display: flex;
+      align-items: stretch;
+      justify-content: flex-start;
+      flex: 0 0 60px;
+      padding: 16px;
+      background-color: $sapphire;
+      border-radius: 24px;
+      border: 1px solid $sapphire;
+      transition: all 0.4s ease;
+      cursor: pointer;
+      &:before {
+        content: "";
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        display: block;
+        width: 22px;
+        height: 22px;
+        background: url("../img/icons/plus-white.svg") center / contain no-repeat;
+        transition: all 0.4s ease;
+      }
+      .panel-title {
+        position: relative;
+        display: block;
+        width: 100%;
+        max-width: max-content;
+        margin-right: 0px;
+        padding-bottom: 30px;
+        padding-left: 10px;
+        font-family: $ff;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: -0.04em;
+        writing-mode: vertical-lr;
+        color: $snow;
+        border-left: 1px solid $white;
+        transform: rotate(180deg);
+      }
+      .panel-content {
+        display: none;
+        width: 100%;
+      }
+      &.active {
+        flex: 1 1 auto;
+        background-color: $snowDark;
+        &:before {
+          background: url("../img/icons/minus-dark.svg") center / contain no-repeat;
+        }
+        .panel-title {
+          margin-right: 24px;
+          color: $blueDark;
+          border-color: $blueDark;
+        }
+        .panel-content {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+          align-content: space-between;
+        }
+      }
+    }
+  }
+
+  .btn {
+    justify-content: space-between;
+    max-width: 286px;
+  }
 }
 
 @media (max-width: 1440px) {
